@@ -25,3 +25,18 @@ const add = (numA, numB) => {
 	return numA + numB;
 }
 ```
+
+We need to explain webpack to register route beyond the root level. Otherwise we will stay on "/'.
+The way to do it is:
+
+```
+ output: {
+    publicPath: "/",
+    ...
+    }
+
+devServer: {
+	historyApiFallback: true
+	...
+	}
+```
