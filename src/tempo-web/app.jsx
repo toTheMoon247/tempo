@@ -1,19 +1,33 @@
 import React from 'react';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+
 import Hello from './components/hello';
 import Welcome from './components/welcome';
+import Dashboard from './components/dashboard';
 
 const App = () => {
 	
 	return (
-		<React.Fragment> 
-			<Hello
-				text="Hello World!"
-				clickFunction={parentFunction}
-			/>
-			<Welcome
-				text="Welcome to Tempo App"
-			/>
-		</React.Fragment>
+		<BrowserRouter>
+			
+			<Switch>
+				
+				<Route path="/" exact> 			
+					<Dashboard />
+				</Route>
+				
+				<Route path="/welcome">
+					<Hello text="Hello World!" clickFunction={parentFunction}/>
+				</Route>
+
+
+				<Route path="/test">
+					<h1>This is our TEST</h1>
+				</Route>
+					
+			</Switch>
+
+		</BrowserRouter>
 		
 	)
 	

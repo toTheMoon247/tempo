@@ -16,6 +16,7 @@ module.exports = {
     extensions: ["*", ".js", ".jsx"],
   },
   output: {
+    publicPath: "/",
     path: path.resolve(__dirname, "../tempo-web/dist"),
     filename: "bundle.js",
   },
@@ -23,5 +24,6 @@ module.exports = {
   devServer: {
     static: path.resolve(__dirname, "../tempo-web/dist"),
     hot: true,
+    historyApiFallback: true
   },
 };
