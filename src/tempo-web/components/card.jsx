@@ -1,14 +1,14 @@
 import React, { Fragment } from 'react';
-
+import '../styles/card.scss';
 
 const Card = (props) => {
 
 	return(
-		<Fragment>
+		<div className="tempo-card">
 			<i></i>
 			<p>Marketing</p>
 			<p>£2,500</p>
-		</Fragment>
+		</div>
 	);
 }
 
