@@ -1,4 +1,24 @@
 .tempo-card {
-	color: green;
-	
+	padding: 2em;
+	border-radius: 10%;
+	border: 1px solid silver;
+	height: 200px;
+	width: 200px;
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: space-between;
+
+	p {
+		margin: 0;
+	}
+
+	.tempo-card__subtitle {
+		color: grey;
+	}
+
+	.tempo-card__total {
+
+		font-weight: bold;
+		font-size: 1.5em;
+	}	
 }
